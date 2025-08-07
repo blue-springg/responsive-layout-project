@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   background-color: #dedede;
   font-family: Arial, sans-serif;
@@ -23,10 +24,12 @@ p {
   margin: 5px 0;
 }
 
+/* Make labels italic */
 .label {
   font-style: italic;
 }
 
+/* Layout container */
 main {
   display: flex;
   flex-wrap: wrap;
@@ -35,31 +38,34 @@ main {
   gap: 10px;
 }
 
+/* Color boxes */
 .color-box {
   width: 100%;
   background-color: white;
   padding: 10px;
   box-sizing: border-box;
   border-radius: 5px;
-  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Images inside boxes */
 .color-box img {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
   width: 100%;
+  aspect-ratio: 16 / 9;   /* keeps all images same shape */
+  object-fit: cover;      /* crops big images */
   border-radius: 5px;
-  aspect-ratio: 16 / 9;     
-  object-fit: cover;        
 }
 
+/* Tablet view - 772px and up */
 @media screen and (min-width: 772px) {
   .color-box {
     width: 45vw;
   }
 }
 
+/* Large screens - 998px and up */
 @media screen and (min-width: 998px) {
   .color-box {
     width: 30vw;
