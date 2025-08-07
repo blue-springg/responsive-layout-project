@@ -53,8 +53,8 @@ main {
   display: block;
   margin: 0 auto;
   width: 100%;
-  aspect-ratio: 16 / 9;   /* keeps all images same shape */
-  object-fit: cover;      /* crops big images */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: 5px;
 }
 
@@ -63,9 +63,13 @@ main {
   .color-box {
     width: 45vw;
   }
+
+  .color-box img {
+    max-height: 30vh;
+    width: auto; /* keeps aspect ratio */
+  }
 }
 
-/* Large screens - 998px and up */
 @media screen and (min-width: 998px) {
   .color-box {
     width: 30vw;
