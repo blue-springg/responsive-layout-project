@@ -24,7 +24,6 @@ p {
   margin: 5px 0;
 }
 
-/* Layout container */
 main {
   display: flex;
   flex-wrap: wrap;
@@ -33,7 +32,6 @@ main {
   gap: 10px;
 }
 
-/* Color boxes - default layout (mobile) */
 .color-box {
   width: 100%;
   background-color: white;
@@ -64,7 +62,6 @@ main {
   }
 }
 
-/* Media Query: Large screens - 998px and up */
 @media screen and (min-width: 998px) {
   .color-box {
     width: 30vw;
