@@ -30,12 +30,12 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px;
-  gap: 10px; /* space between divs */
+  gap: 10px;
 }
 
-/* Color boxes (default mobile) */
-div {
-  width: 100%; /* stacked on mobile */
+/* Color boxes - default layout (mobile) */
+.color-box {
+  width: 100%;
   background-color: white;
   padding: 10px;
   box-sizing: border-box;
@@ -43,8 +43,8 @@ div {
   box-shadow: 0 0 4px rgba(0,0,0,0.2);
 }
 
-/* Images */
-div img {
+/* Images inside boxes */
+.color-box img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
@@ -52,21 +52,21 @@ div img {
   border-radius: 5px;
 }
 
-/* Media Query: Tablet view - min width 772px */
+/* Media Query: Tablet view - 772px and up */
 @media screen and (min-width: 772px) {
-  div {
-    flex: 0 0 45vw; /* each div takes 45% of viewport width, no grow or shrink */
+  .color-box {
+    width: 45vw;
   }
 
-  div img {
-    max-height: 30vh; /* image max height is 30% of viewport height */
-    width: auto; /* maintain aspect ratio */
+  .color-box img {
+    max-height: 30vh;
+    width: auto;
   }
 }
 
-/* Media Query: Large screen view - min width 998px */
+/* Media Query: Large screens - 998px and up */
 @media screen and (min-width: 998px) {
-  div {
-    flex: 0 0 30vw; /* each div takes 30% of viewport width */
+  .color-box {
+    width: 30vw;
   }
 }
