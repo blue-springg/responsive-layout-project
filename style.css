@@ -1,4 +1,3 @@
-/* Base styles */
 body {
   background-color: #dedede;
   font-family: Arial, sans-serif;
@@ -24,6 +23,10 @@ p {
   margin: 5px 0;
 }
 
+.label {
+  font-style: italic;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -41,24 +44,19 @@ main {
   box-shadow: 0 0 4px rgba(0,0,0,0.2);
 }
 
-/* Images inside boxes */
 .color-box img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  height: auto;
+  width: 100%;
   border-radius: 5px;
+  aspect-ratio: 16 / 9;     
+  object-fit: cover;        
 }
 
-/* Media Query: Tablet view - 772px and up */
 @media screen and (min-width: 772px) {
   .color-box {
     width: 45vw;
-  }
-
-  .color-box img {
-    max-height: 30vh;
-    width: auto;
   }
 }
 
